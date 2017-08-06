@@ -8,7 +8,7 @@ import java.util.List;
 
 
 
-public class Values {
+public class Value{
 
     String value;
     String message;
