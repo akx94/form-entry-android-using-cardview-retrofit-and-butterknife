@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Testing Insert</string>
+    <string name="npm">Npm</string>
+    <string name="name">Nama</string>
+    <string name="classes">Kelas</string>
+    <string name="session">Sessi</string>
+    <string name="morning">Pagi</string>
+    <string name="afternoon">Sore</string>
+    <string name="register">Daftar</string>
+    <string name="error">Kesalahan Jaringan</string>
+    <string name="view">Lihat Data</string>
+
+
+</resources>
