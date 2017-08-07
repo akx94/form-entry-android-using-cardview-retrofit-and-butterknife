@@ -34,12 +34,19 @@ public class ViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view);
         ButterKnife.bind(this);
+
+        //start action bar
         getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Daftar");
+        //init recycler view adapter
         viewAdapter = new RecyclerViewAdapter(this,results);
+        //init layout in current environtment
+        // layout manager manage widget and data
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+        //set layout manager
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
+        //set adapter
         recyclerView.setAdapter(viewAdapter);
         LoadData();
 
@@ -72,6 +79,7 @@ public class ViewActivity extends AppCompatActivity {
                 String value = response.body().getValue();
                 progressBar.setVisibility(View.GONE);
                 if (value.equals("1")) {
+                    //get result
                     results = response.body().getResult();
                     viewAdapter = new RecyclerViewAdapter(ViewActivity.this, results);
                     recyclerView.setAdapter(viewAdapter);
