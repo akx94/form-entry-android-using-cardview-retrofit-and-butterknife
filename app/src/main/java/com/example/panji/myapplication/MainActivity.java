@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         //inisialisasi radio yang id nya
         radioSexButton = (RadioButton)findViewById(selectedId);
         //ambil nilai dari radio yg di select
+
         String sesi = radioSexButton.getText().toString();
         //inisialisasi retrofite
         Retrofit retrofit = new Retrofit.Builder()
